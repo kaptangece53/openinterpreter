@@ -134,7 +134,7 @@ if [[ -n "$python_command" ]]; then
     exit 1
   fi
 else
-  for candidate in python3 python3.13 python3.12 python3.11; do
+  for candidate in python3 python3.13 python3.12 python3.11 python; do
     if command -v "$candidate" >/dev/null 2>&1 &&
        "$candidate" -c 'import tomllib' >/dev/null 2>&1; then
       python_command="$candidate"
